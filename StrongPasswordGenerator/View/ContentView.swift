@@ -32,16 +32,18 @@ struct ContentView: View {
                             Text("Special Characters")
                         }
                     )
-                    PasswordLengthListItemView(length: Float(viewModel.model.passwordLength))
+                    .padding()
+                    PasswordLengthListItemView(viewModel: viewModel, length: Float(viewModel.model.passwordLength))
                     
                 }.listStyle(PlainListStyle())
 
-                PasswordView(password: viewModel.model.password).padding(.top)
+                PasswordView(viewModel: viewModel).padding(.top)
 
             }
             .padding(.top)
-            .navigationBarTitle(Text("Password Generator").font(.subheadline), displayMode: .automatic)
+            .navigationBarTitle(Text("Password Generator"), displayMode: .automatic)
         }
+        .onAppear(perform: {self.viewModel.generatePassword()})
     }
 }
 

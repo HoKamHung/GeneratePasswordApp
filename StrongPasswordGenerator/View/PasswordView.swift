@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct PasswordView: View {
-    @State public var password: String
-
+    @ObservedObject var viewModel: PasswordViewModel
 
     var body: some View {
         VStack (alignment: .leading){
@@ -17,13 +16,16 @@ struct PasswordView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.leading)
             HStack {
-                TextField("Password", text: $password).padding(.all)
+//                TextField("Password", text: viewModel.password).padding(.all)
+                Spacer()
                 Button {
-                    //viewModel.to = key
+                    // Copy to clipboard
+                    viewModel.copyToClipboard()
                 } label: {
-                    Text("Copy")
+                    Text(viewModel.password)
+                        .multilineTextAlignment(.center)
                 }.padding()
-
+                Spacer()
             }
         }.padding(.top)
     }
@@ -31,6 +33,6 @@ struct PasswordView: View {
 
 struct PasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordView(password: "1234")
+        PasswordView(viewModel: .init())
     }
 }

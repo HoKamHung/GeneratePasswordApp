@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct PasswordLengthListItemView: View {
+    @ObservedObject var viewModel: PasswordViewModel
     @State var length : Float
 
     var body: some View {
         HStack {
-            Slider(value: $length, in: 1...100, step:1).padding()
+            Slider(value: Binding(get: {
+                self.length
+            }, set: { value in
+                self.length = value
+                viewModel.model.passwordLength = Int(value)
+                viewModel.generatePassword()
+            }), in: 1...100) {
+                Text("Length")
+            }
+
             Text(String(Int(length))).padding()
         }
     }
@@ -20,6 +30,6 @@ struct PasswordLengthListItemView: View {
 
 struct PasswordLengthListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordLengthListItemView(length: 10)
+        PasswordLengthListItemView(viewModel: .init(), length: 10)
     }
 }

@@ -13,6 +13,7 @@
 		8453F38E25A8CBD80002B2CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8453F38D25A8CBD80002B2CE /* Preview Assets.xcassets */; };
 		8453F39925A8CBD80002B2CE /* StrongPasswordGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453F39825A8CBD80002B2CE /* StrongPasswordGeneratorTests.swift */; };
 		8453F3A425A8CBD80002B2CE /* StrongPasswordGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453F3A325A8CBD80002B2CE /* StrongPasswordGeneratorUITests.swift */; };
+		8471DB4026E6A72200834EFF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8471DB3F26E6A72200834EFF /* MobileCoreServices.framework */; };
 		84CDFD9025B91DA000E5DC23 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFD8F25B91DA000E5DC23 /* PasswordView.swift */; };
 		84CDFD9825B925BE00E5DC23 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFD9725B925BE00E5DC23 /* PasswordModel.swift */; };
 		84CDFD9D25B927E400E5DC23 /* SpecialCharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFD9C25B927E400E5DC23 /* SpecialCharactersListView.swift */; };
@@ -55,6 +56,7 @@
 		8453F39F25A8CBD80002B2CE /* StrongPasswordGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrongPasswordGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8453F3A325A8CBD80002B2CE /* StrongPasswordGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongPasswordGeneratorUITests.swift; sourceTree = "<group>"; };
 		8453F3A525A8CBD80002B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8471DB3F26E6A72200834EFF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		84CDFD8F25B91DA000E5DC23 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		84CDFD9725B925BE00E5DC23 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 		84CDFD9C25B927E400E5DC23 /* SpecialCharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharactersListView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8471DB4026E6A72200834EFF /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +112,7 @@
 				8453F39725A8CBD80002B2CE /* StrongPasswordGeneratorTests */,
 				8453F3A225A8CBD80002B2CE /* StrongPasswordGeneratorUITests */,
 				8453F38425A8CBD70002B2CE /* Products */,
+				8471DB3E26E6A72100834EFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +164,14 @@
 				8453F3A525A8CBD80002B2CE /* Info.plist */,
 			);
 			path = StrongPasswordGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		8471DB3E26E6A72100834EFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8471DB3F26E6A72200834EFF /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		84CDFD8A25B91AC600E5DC23 /* View */ = {
