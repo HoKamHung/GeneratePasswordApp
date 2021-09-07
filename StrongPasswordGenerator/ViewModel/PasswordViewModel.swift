@@ -12,14 +12,24 @@ import UIKit
 final class PasswordViewModel : ObservableObject {
     @Published public var model : PasswordModel
     @Published public var password : String
+    @Published var specialCharactersCheckList : [SpecialCharactersCheckListItem] = []
+    let specialCharctersModel : SpecialCharactersListModel
+    let checkDefaultStatus : Bool = true
 
     init() {
         model = PasswordModel()
         password = ""
+
+        specialCharctersModel = SpecialCharactersListModel()
+        SpecialCharactersListModel.charactersList.forEach {
+            specialCharactersCheckList.append(SpecialCharactersCheckListItem(char: $0, checked: checkDefaultStatus))
+        }
     }
 
     func generatePassword()
     {
+        model.specialCharacters = getSpecialCharactersList()
+        model.createCharList()
         model.password.removeAll()
 
         for _ in 1...model.passwordLength {
@@ -27,6 +37,21 @@ final class PasswordViewModel : ObservableObject {
         }
 
         self.password = model.password
+    }
+
+    func getSpecialCharactersList() -> [String]
+    {
+        var charList: [String] = [String]()
+
+        for specialCharacterItem in specialCharactersCheckList
+        {
+            if specialCharacterItem.checked
+            {
+                charList.append(specialCharacterItem.char)
+            }
+        }
+
+        return charList
     }
 
     func copyToClipboard()

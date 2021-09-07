@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentViewCheckListItemView: View {
-    @State var enabled : Bool
+    @Binding var enabled : Bool
     @State var name : String
 
     var body: some View {
@@ -26,6 +26,12 @@ struct ContentViewCheckListItemView: View {
 
 struct ContentViewCheckListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentViewCheckListItemView(enabled: true, name: "Numeric")
+        var enabled: Bool = true
+
+        ContentViewCheckListItemView(enabled: Binding<Bool>(get: {
+            enabled
+        }, set: { value in
+            enabled = value
+        }), name: "Numeric")
     }
 }

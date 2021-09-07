@@ -18,7 +18,6 @@
 		84CDFD9825B925BE00E5DC23 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFD9725B925BE00E5DC23 /* PasswordModel.swift */; };
 		84CDFD9D25B927E400E5DC23 /* SpecialCharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFD9C25B927E400E5DC23 /* SpecialCharactersListView.swift */; };
 		84CDFDA225B927FA00E5DC23 /* SpecialCharactersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFDA125B927FA00E5DC23 /* SpecialCharactersListModel.swift */; };
-		84CDFDA725B928D300E5DC23 /* SpecialCharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFDA625B928D300E5DC23 /* SpecialCharactersListViewModel.swift */; };
 		84CDFDAC25B932BC00E5DC23 /* SpecialCharactersCheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFDAB25B932BC00E5DC23 /* SpecialCharactersCheckListItem.swift */; };
 		84CDFDB125B935DD00E5DC23 /* SpecialCharactersCheckListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFDB025B935DD00E5DC23 /* SpecialCharactersCheckListItemView.swift */; };
 		84CDFDB925B93BDA00E5DC23 /* ContentViewCheckListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFDB825B93BDA00E5DC23 /* ContentViewCheckListItemView.swift */; };
@@ -61,7 +60,6 @@
 		84CDFD9725B925BE00E5DC23 /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 		84CDFD9C25B927E400E5DC23 /* SpecialCharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharactersListView.swift; sourceTree = "<group>"; };
 		84CDFDA125B927FA00E5DC23 /* SpecialCharactersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharactersListModel.swift; sourceTree = "<group>"; };
-		84CDFDA625B928D300E5DC23 /* SpecialCharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharactersListViewModel.swift; sourceTree = "<group>"; };
 		84CDFDAB25B932BC00E5DC23 /* SpecialCharactersCheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharactersCheckListItem.swift; sourceTree = "<group>"; };
 		84CDFDB025B935DD00E5DC23 /* SpecialCharactersCheckListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCharactersCheckListItemView.swift; sourceTree = "<group>"; };
 		84CDFDB825B93BDA00E5DC23 /* ContentViewCheckListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewCheckListItemView.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		84CDFD8B25B91ACB00E5DC23 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				84CDFDA625B928D300E5DC23 /* SpecialCharactersListViewModel.swift */,
 				84CDFDC025B93C7900E5DC23 /* PasswordViewModel.swift */,
 			);
 			path = ViewModel;
@@ -331,7 +328,6 @@
 				84CDFDB925B93BDA00E5DC23 /* ContentViewCheckListItemView.swift in Sources */,
 				8453F38925A8CBD70002B2CE /* ContentView.swift in Sources */,
 				84CDFDB125B935DD00E5DC23 /* SpecialCharactersCheckListItemView.swift in Sources */,
-				84CDFDA725B928D300E5DC23 /* SpecialCharactersListViewModel.swift in Sources */,
 				84CDFD9025B91DA000E5DC23 /* PasswordView.swift in Sources */,
 				84CDFD9D25B927E400E5DC23 /* SpecialCharactersListView.swift in Sources */,
 				84CDFD9825B925BE00E5DC23 /* PasswordModel.swift in Sources */,

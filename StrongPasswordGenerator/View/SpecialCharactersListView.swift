@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct SpecialCharactersListView: View {
-    @ObservedObject var viewModel: SpecialCharactersListViewModel
+    @ObservedObject var viewModel: PasswordViewModel
 
     var body: some View {
         List() {
-            ForEach(viewModel.specialCharactersCheckList, id: \.self) {
-                item in
-                SpecialCharactersCheckListItemView(item: item)
+            ForEach(viewModel.specialCharactersCheckList.indices) {
+                index in
+                Button(action: {
+                    viewModel.specialCharactersCheckList[index].checked = !viewModel.specialCharactersCheckList[index].checked
+                    viewModel.generatePassword()
+                }, label: {
+                    SpecialCharactersCheckListItemView(item: $viewModel.specialCharactersCheckList[index])
+                })
             }
         }
         .navigationBarTitle("Characters")
@@ -24,6 +29,6 @@ struct SpecialCharactersListView: View {
 
 struct SpecialCharactersListView_Previews: PreviewProvider {
     static var previews: some View {
-        SpecialCharactersListView(viewModel: SpecialCharactersListViewModel())
+        SpecialCharactersListView(viewModel: PasswordViewModel())
     }
 }

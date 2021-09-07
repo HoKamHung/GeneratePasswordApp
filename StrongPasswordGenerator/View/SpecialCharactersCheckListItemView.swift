@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SpecialCharactersCheckListItemView: View {
-    @State var item : SpecialCharactersCheckListItem
+    @Binding var item : SpecialCharactersCheckListItem
 
     var body: some View {
         HStack {
@@ -24,7 +24,13 @@ struct SpecialCharactersCheckListItemView: View {
 }
 
 struct CheckListItemView_Previews: PreviewProvider {
+    static var checkListItem: SpecialCharactersCheckListItem = .init(char: "@", checked: true)
+
     static var previews: some View {
-        SpecialCharactersCheckListItemView(item: SpecialCharactersCheckListItem(char: "@", checked: true))
+        SpecialCharactersCheckListItemView(item: Binding(get: {
+            checkListItem
+        }, set: { obj in
+            checkListItem = obj
+        }) )
     }
 }
